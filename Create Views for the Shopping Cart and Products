@@ -1,0 +1,15 @@
+@model IEnumerable<SimpleShoppingWebsite.Models.Product>
+
+<h2>Product List</h2>
+
+<div>
+    @foreach (var product in Model)
+    {
+        <div>
+            <h3>@product.Name</h3>
+            <p>@product.Description</p>
+            <p>Price: $@product.Price</p>
+            <a href="@Url.Action("AddToCart", new { productId = product.Id })">Add to Cart</a>
+        </div>
+    }
+</div>
