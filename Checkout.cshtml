@@ -1,0 +1,13 @@
+@model SimpleShoppingWebsite.Models.Cart
+
+<h2>Checkout</h2>
+
+@if (Model.Items.Count == 0)
+{
+    <p>Your cart is empty. Please add products to your cart.</p>
+}
+else
+{
+    <p>Total amount: $@Model.TotalAmount</p>
+    <p>Proceeding with checkout...</p>
+}
